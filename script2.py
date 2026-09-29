@@ -159,40 +159,44 @@ def admin():
 
 
 # головне меню
-while True:
+def main():
+    while True:
+        print("\n-магазин-")
+        print("1  каталог")
+        print("2  добавити в кошик")
+        print("3  кошик")
+        print("4  видалити з кошика")
+        print("5  купити")
+        print("6  адміністратор")
+        print("0  вихід")
 
-    print("\n-магазин-")
-    print("1  каталог")
-    print("2  добавити в кошик")
-    print("3  кошик")
-    print("4  видалити з кошика")
-    print("5  купити")
-    print("6  адміністратор")
-    print("0  вихід")
+        choice = input("ваш вибір: ")
 
-    choice = input("ваш вибір: ")
+        if choice == "1":
+            show_catalog()
 
-    if choice == "1":
-        show_catalog()
+        elif choice == "2":
+            add_to_cart()
 
-    elif choice == "2":
-        add_to_cart()
+        elif choice == "3":
+            show_cart()
 
-    elif choice == "3":
-        show_cart()
+        elif choice == "4":
+            remove_from_cart()
 
-    elif choice == "4":
-        remove_from_cart()
+        elif choice == "5":
+            buy()
 
-    elif choice == "5":
-        buy()
+        elif choice == "6":
+            admin()
 
-    elif choice == "6":
-        admin()
+        elif choice == "0":
+            print("до побачення")
+            break
 
-    elif choice == "0":
-        print("до побачення")
-        break
+        else:
+            print("такого пункту нема")
 
-    else:
-        print("такого пункту нема")
+
+if __name__ == "__main__":
+    main()
