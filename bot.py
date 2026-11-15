@@ -14,7 +14,7 @@ from aiogram.types import (
 )
 
 # === ТВОЙ ТОКЕН ТЕЛЕГРАМ-БОТА ===
-TELEGRAM_TOKEN = "9246243317:AAGnAyElVkCuGEQz9_exI7X4g2jVzODMjgo"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 router = Router()
 
